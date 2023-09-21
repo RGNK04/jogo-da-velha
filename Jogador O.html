@@ -1,0 +1,913 @@
+<meta charset="utf-8">
+
+<body bgcolor="Orange">
+<center>
+<script>
+
+	window.alert("O jogador X começa!");
+	window.alert("O jogador X colocou um x no campo 3!");
+
+    var r1 = 3
+
+    var vi1 = 0
+    var vi2 = 0
+    var vi3 = 0
+    var vi4 = 0
+    var vi5 = 0
+    var vi6 = 0
+    var vi7 = 0
+    var vi8 = 0
+    var vi9 = 0
+
+    var a1 = 0
+    var a2 = 0
+    var a3 = 1
+    var a4 = 0
+    var a5 = 0
+    var a6 = 0
+    var a7 = 0
+    var a8 = 0
+    var a9 = 0
+
+    var z1 = 0
+    var z2 = 0
+    var z3 = 1
+    var z4 = 0
+    var z5 = 0
+    var z6 = 0
+    var z7 = 0
+    var z8 = 0
+    var z9 = 0
+
+    tabuleiro2(a1,a2,a3,a4,a5,a6,a7,a8,a9)
+
+   
+
+	var r2 = Number(window.prompt(`Digite o número do campo que deseja preencher (os campos ${r1} estão preenchidos)`));
+
+	if (r2 == 7) {
+
+		var z7 = 1
+		var a7 = 2
+
+	} else if (r2 == 1) {
+
+		var z1 = 1
+		var a1 = 2
+
+	} else if (r2 == 2) {
+
+		var z2 = 1
+		var a2 = 2
+    } else if (r2 == 4) {
+
+		var z4 = 1
+		var a4 = 2
+
+	} else if (r2 == 5) {
+
+		var z5 = 1
+		var a5 = 2
+
+    } else if (r2 == 6) {
+
+		var z6 = 1
+		var a6 = 2
+
+	} else if (r2 == 8) {
+
+		var z8 = 1
+		var a8 = 2
+
+	} else if (r2 == 9) {
+
+		var z9 = 1
+		var a9 = 2
+
+	} 
+
+	if (a7 == 2) {
+
+		a1 = 1
+	} else {
+
+		a7 = 1
+	}
+
+	if (r2 == 7) {
+
+		var r3 = 1
+
+		window.alert("O jogador X colocou um x no campo 1!");
+	} else {
+
+		var r3 = 7
+
+		window.alert("O jogador X colocou um x no campo 7!");
+	}
+
+	tabuleiro2(a1,a2,a3,a4,a5,a6,a7,a8,a9)
+
+	var r4 = Number(window.prompt(`Digite o campo que deseja preencher (${r1}, ${r2}, ${r3} ocupados`));
+
+	if (r4 == 1) {
+		var z1 = 1
+
+		var a1 = 2
+	
+
+	} else if (r4 == 2) {
+		var z2 = 1
+		var a2 = 2
+
+	
+
+	} else if (r4 == 4) {
+		var z4 = 1
+		var a4 = 2
+
+		
+
+    } else if (r4 == 5) {
+    	var z5 = 1
+    	var a5 = 2
+
+
+
+	} else if (r4 == 6) {
+		var z6 = 1
+		var a6 = 2
+
+	
+
+    } else if (r4 == 8) {
+    	var z8 = 1
+    	var a8 = 2
+
+	
+
+	} else if (r4 == 9) {
+		var z9 = 1
+		var a9 = 2
+
+	} 
+
+	if (a7 == 1) {
+
+		if (z5 == 0) {
+
+			z5 = 1
+			a5 = 1
+			window.alert("O jogador X colocu um x no campo 5!");
+
+		} else if (z9 == 0) {
+
+			z9 = 1
+			a9 = 1
+			window.alert("O jogador X colocou um x no campo 9!");
+
+		} else {
+
+			z1 = 1
+			a1 = 1
+			window.alert("O jogador X colocou um x no campo 1!");
+		}
+
+	} else if (a7 == 2) {
+
+		if (z2 == 0) {
+
+			z2 = 1
+			a2 = 1
+			window.alert("O jogador X colocou um x no campo 2!");
+
+		} else if (z9 == 0) {
+
+			z9 = 1
+			a9 = 1
+			window.alert("O jogador X colocou um x no campo 9!");
+		}
+	}
+	    
+
+
+	if (a1 == 1 && a2 == 1 && a3 == 1) {
+
+		document.write("<h2>Game Over!<br>Você Perdeu!</h2>");
+
+	} else if (a1 == 2 && a2 == 2 && a3 == 2) {
+
+		document.write("<h2>Game Over!<br>Você Ganhou!</h2>");
+
+	} else if (a4 == 1 && a5 == 1 && a6 == 1) {
+
+		document.write("<h2>Game Over!<br>Você Perdeu!</h2>");
+
+	} else if (a4 == 2 && a5 == 2 && a6 == 2) {
+
+		document.write("<h2>Game Over!<br>Você Ganhou!</h2>");
+
+	} else if (a7 == 1 && a8 == 1 && a9 == 1) {
+
+		document.write("<h2>Game Over!<br>Você Perdeu!</h2>");
+
+	} else if (a7 == 2 && a8 == 2 && a9 == 2) {
+
+		document.write("<h2>Game Over!<br>Você Ganhou!</h2>");
+
+	} else if (a1 == 1 && a4 == 1 && a7 == 1) {
+
+		document.write("<h2>Game Over!<br>Você Perdeu!</h2>");
+
+	} else if (a1 == 2 && a4 == 2 && a7 == 2) {
+
+		document.write("<h2>Game Over!<br>Você Ganhou!</h2>");
+
+	} else if (a2 == 1 && a5 == 1 && a8 == 1) {
+
+		document.write("<h2>Game Over!<br>Você Perdeu!</h2>");
+
+	} else if (a2 == 2 && a5 == 2 && a8 == 2) {
+
+		document.write("<h2>Game Over!<br>Você Ganhou!</h2>");
+
+	} else if (a3 == 1 && a6 == 1 && a9 == 1) {
+
+		document.write("<h2>Game Over!<br>Você Perdeu!</h2>");
+
+	} else if (a3 == 2 && a6 == 2 && a9 == 2) {
+
+		document.write("<h2>Game Over!<br>Você Ganhou!</h2>");
+
+	} else if (a1 == 1 && a5 == 1 && a9 == 1) {
+
+		document.write("<h2>Game Over!<br>Você Perdeu!</h2>");
+
+	} else if (a1 == 2 && a5 == 2 && a9 == 2) {
+
+		document.write("<h2>Game Over!<br>Você Ganhou!</h2>");
+
+	} else if (a3 == 1 && a5 == 1 && a7 == 1) {
+
+		document.write("<h2>Game Over!<br>Você Perdeu!</h2>");
+
+	} else if (a3 == 2 && a5 == 2 && a7 == 2) {
+
+		document.write("<h2>Game Over!<br>Você Ganhou!</h2>");
+
+	} else {
+
+		tabuleiro2(a1,a2,a3,a4,a5,a6,a7,a8,a9)
+
+		var r6 = window.prompt("Sua Vez!");
+
+		if (r6 == 1) {
+		var z1 = 1
+
+		var a1 = 2
+	
+
+	    } else if (r6 == 2) {
+		var z2 = 1
+		var a2 = 2
+
+	
+
+	    } else if (r6 == 3) {
+		var z3 = 1
+		var a3 = 2
+
+		
+
+        } else if (r6 == 4) {
+    	var z4 = 1
+    	var a4 = 2
+
+
+
+	    } else if (r6 == 5) {
+		var z5 = 1
+		var a5 = 2
+
+	
+
+        } else if (r6 == 6) {
+    	var z6 = 1
+    	var a6 = 2
+
+	
+
+	    } else if (r6 == 7) {
+		var z7 = 1
+		var a7 = 2
+
+	    } else if (r6 == 8) {
+	    var z8 = 1
+	    var a8 = 2
+
+	    } else if (r6 == 9) {
+	    var z9 = 1
+	    var a9 = 2
+
+	    }
+
+
+	    if (a1 == 1 && a2 == 1 && a3 == 1) {
+
+		document.write("<h2>Game Over!<br>Você Perdeu!</h2>");
+
+	} else if (a1 == 2 && a2 == 2 && a3 == 2) {
+
+		document.write("<h2>Game Over!<br>Você Ganhou!</h2>");
+
+	} else if (a4 == 1 && a5 == 1 && a6 == 1) {
+
+		document.write("<h2>Game Over!<br>Você Perdeu!</h2>");
+
+	} else if (a4 == 2 && a5 == 2 && a6 == 2) {
+
+		document.write("<h2>Game Over!<br>Você Ganhou!</h2>");
+
+	} else if (a7 == 1 && a8 == 1 && a9 == 1) {
+
+		document.write("<h2>Game Over!<br>Você Perdeu!</h2>");
+
+	} else if (a7 == 2 && a8 == 2 && a9 == 2) {
+
+		document.write("<h2>Game Over!<br>Você Ganhou!</h2>");
+
+	} else if (a1 == 1 && a4 == 1 && a7 == 1) {
+
+		document.write("<h2>Game Over!<br>Você Perdeu!</h2>");
+
+	} else if (a1 == 2 && a4 == 2 && a7 == 2) {
+
+		document.write("<h2>Game Over!<br>Você Ganhou!</h2>");
+
+	} else if (a2 == 1 && a5 == 1 && a8 == 1) {
+
+		document.write("<h2>Game Over!<br>Você Perdeu!</h2>");
+
+	} else if (a2 == 2 && a5 == 2 && a8 == 2) {
+
+		document.write("<h2>Game Over!<br>Você Ganhou!</h2>");
+
+	} else if (a3 == 1 && a6 == 1 && a9 == 1) {
+
+		document.write("<h2>Game Over!<br>Você Perdeu!</h2>");
+
+	} else if (a3 == 2 && a6 == 2 && a9 == 2) {
+
+		document.write("<h2>Game Over!<br>Você Ganhou!</h2>");
+
+	} else if (a1 == 1 && a5 == 1 && a9 == 1) {
+
+		document.write("<h2>Game Over!<br>Você Perdeu!</h2>");
+
+	} else if (a1 == 2 && a5 == 2 && a9 == 2) {
+
+		document.write("<h2>Game Over!<br>Você Ganhou!</h2>");
+
+	} else if (a3 == 1 && a5 == 1 && a7 == 1) {
+
+		document.write("<h2>Game Over!<br>Você Perdeu!</h2>");
+
+	} else if (a3 == 2 && a5 == 2 && a7 == 2) {
+
+		document.write("<h2>Game Over!<br>Você Ganhou!</h2>");
+
+	} else {
+
+		if (a7 == 1) {
+
+			if (a1 == 1 && z2 == 0) {
+
+				z2 = 1
+				a2 = 1
+				window.alert("O jogador X colocou um x no campo 2!");
+
+			} else if (a1 == 1 && z4 == 0) {
+
+				z4 = 1
+				a4 = 1 
+				window.alert("O jogador X colocou um x no campo 4!");
+			} else if (a9 == 1 && z6 == 0) {
+
+				z6 = 1
+				a6 = 1
+				window.alert("O jogador X colocou um x no campo 6!");
+
+			} else if (a9 == 1 && z8 == 0) {
+
+				z8 = 1
+				a8 = 1
+				window.alert("O jogador X colocou um x no campo 8!");
+
+			} else if (a8 == 2 && a6 == 2) {
+
+				z1 = 1
+				a1 = 1
+				window.alert("O jogador X colocou um x no campo 1!");
+			}
+		} else if (a7 == 2) {
+
+			if (z5 == 0) {
+
+				z5 = 1
+				a5 = 1
+				window.alert("O jogador X colocou um x no campo 5!");
+			} else if (z6 == 0) {
+
+				z6 = 1
+				a6 = 1
+				window.alert("O jogador X colocou um x no campo 6!");
+			}
+		}
+
+		if (a1 == 1 && a2 == 1 && a3 == 1) {
+
+		document.write("<h2>Game Over!<br>Você Perdeu!</h2>");
+
+	} else if (a1 == 2 && a2 == 2 && a3 == 2) {
+
+		document.write("<h2>Game Over!<br>Você Ganhou!</h2>");
+
+	} else if (a4 == 1 && a5 == 1 && a6 == 1) {
+
+		document.write("<h2>Game Over!<br>Você Perdeu!</h2>");
+
+	} else if (a4 == 2 && a5 == 2 && a6 == 2) {
+
+		document.write("<h2>Game Over!<br>Você Ganhou!</h2>");
+
+	} else if (a7 == 1 && a8 == 1 && a9 == 1) {
+
+		document.write("<h2>Game Over!<br>Você Perdeu!</h2>");
+
+	} else if (a7 == 2 && a8 == 2 && a9 == 2) {
+
+		document.write("<h2>Game Over!<br>Você Ganhou!</h2>");
+
+	} else if (a1 == 1 && a4 == 1 && a7 == 1) {
+
+		document.write("<h2>Game Over!<br>Você Perdeu!</h2>");
+
+	} else if (a1 == 2 && a4 == 2 && a7 == 2) {
+
+		document.write("<h2>Game Over!<br>Você Ganhou!</h2>");
+
+	} else if (a2 == 1 && a5 == 1 && a8 == 1) {
+
+		document.write("<h2>Game Over!<br>Você Perdeu!</h2>");
+
+	} else if (a2 == 2 && a5 == 2 && a8 == 2) {
+
+		document.write("<h2>Game Over!<br>Você Ganhou!</h2>");
+
+	} else if (a3 == 1 && a6 == 1 && a9 == 1) {
+
+		document.write("<h2>Game Over!<br>Você Perdeu!</h2>");
+
+	} else if (a3 == 2 && a6 == 2 && a9 == 2) {
+
+		document.write("<h2>Game Over!<br>Você Ganhou!</h2>");
+
+	} else if (a1 == 1 && a5 == 1 && a9 == 1) {
+
+		document.write("<h2>Game Over!<br>Você Perdeu!</h2>");
+
+	} else if (a1 == 2 && a5 == 2 && a9 == 2) {
+
+		document.write("<h2>Game Over!<br>Você Ganhou!</h2>");
+
+	} else if (a3 == 1 && a5 == 1 && a7 == 1) {
+
+		document.write("<h2>Game Over!<br>Você Perdeu!</h2>");
+
+	} else if (a3 == 2 && a5 == 2 && a7 == 2) {
+
+		document.write("<h2>Game Over!<br>Você Ganhou!</h2>");
+
+	} else {
+
+		tabuleiro2(a1,a2,a3,a4,a5,a6,a7,a8,a9)
+
+		var r8 = window.prompt("Sua Vez!");
+
+		if (r8 == 1) {
+		var z1 = 1
+
+		var a1 = 2
+	
+
+	    } else if (r8 == 2) {
+		var z2 = 1
+		var a2 = 2
+
+	
+
+	    } else if (r8 == 3) {
+		var z3 = 1
+		var a3 = 2
+
+		
+
+        } else if (r8 == 4) {
+    	var z4 = 1
+    	var a4 = 2
+
+
+
+	    } else if (r8 == 5) {
+		var z5 = 1
+		var a5 = 2
+
+	
+
+        } else if (r8 == 6) {
+    	var z6 = 1
+    	var a6 = 2
+
+	
+
+	    } else if (r8 == 7) {
+		var z7 = 1
+		var a7 = 2
+
+	    } else if (r8 == 8) {
+	    var z8 = 1
+	    var a8 = 2
+
+	    } else if (r8 == 9) {
+	    var z9 = 1
+	    var a9 = 2
+
+	    }
+
+	    if (a1 == 1 && a2 == 1 && a3 == 1) {
+
+		document.write("<h2>Game Over!<br>Você Perdeu!</h2>");
+
+	} else if (a1 == 2 && a2 == 2 && a3 == 2) {
+
+		document.write("<h2>Game Over!<br>Você Ganhou!</h2>");
+
+	} else if (a4 == 1 && a5 == 1 && a6 == 1) {
+
+		document.write("<h2>Game Over!<br>Você Perdeu!</h2>");
+
+	} else if (a4 == 2 && a5 == 2 && a6 == 2) {
+
+		document.write("<h2>Game Over!<br>Você Ganhou!</h2>");
+
+	} else if (a7 == 1 && a8 == 1 && a9 == 1) {
+
+		document.write("<h2>Game Over!<br>Você Perdeu!</h2>");
+
+	} else if (a7 == 2 && a8 == 2 && a9 == 2) {
+
+		document.write("<h2>Game Over!<br>Você Ganhou!</h2>");
+
+	} else if (a1 == 1 && a4 == 1 && a7 == 1) {
+
+		document.write("<h2>Game Over!<br>Você Perdeu!</h2>");
+
+	} else if (a1 == 2 && a4 == 2 && a7 == 2) {
+
+		document.write("<h2>Game Over!<br>Você Ganhou!</h2>");
+
+	} else if (a2 == 1 && a5 == 1 && a8 == 1) {
+
+		document.write("<h2>Game Over!<br>Você Perdeu!</h2>");
+
+	} else if (a2 == 2 && a5 == 2 && a8 == 2) {
+
+		document.write("<h2>Game Over!<br>Você Ganhou!</h2>");
+
+	} else if (a3 == 1 && a6 == 1 && a9 == 1) {
+
+		document.write("<h2>Game Over!<br>Você Perdeu!</h2>");
+
+	} else if (a3 == 2 && a6 == 2 && a9 == 2) {
+
+		document.write("<h2>Game Over!<br>Você Ganhou!</h2>");
+
+	} else if (a1 == 1 && a5 == 1 && a9 == 1) {
+
+		document.write("<h2>Game Over!<br>Você Perdeu!</h2>");
+
+	} else if (a1 == 2 && a5 == 2 && a9 == 2) {
+
+		document.write("<h2>Game Over!<br>Você Ganhou!</h2>");
+
+	} else if (a3 == 1 && a5 == 1 && a7 == 1) {
+
+		document.write("<h2>Game Over!<br>Você Perdeu!</h2>");
+
+	} else if (a3 == 2 && a5 == 2 && a7 == 2) {
+
+		document.write("<h2>Game Over!<br>Você Ganhou!</h2>");
+
+	}
+
+		
+	}
+
+
+
+
+
+	}
+		
+
+	}
+
+
+
+	
+
+
+
+
+        var vf1 = 0 + vi1 + a1
+	    var vf2 = 0 + vi2 + a2
+	    var vf3 = 0 + vi3 + a3
+	    var vf4 = 0 + vi4 + a4
+	    var vf5 = 0 + vi5 + a5
+	    var vf6 = 0 + vi6 + a6
+	    var vf7 = 0 + vi7 + a7
+	    var vf8 = 0 + vi8 + a8
+	    var vf9 = 0 + vi9 + a9
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+	
+
+
+	
+	document.write("<br><br>");
+
+	function tabuleiro (n1=0,n2=0,n3=0,n4=0,n5=0,n6=0,n7=0,n8=0,n9=0) {
+
+		if (n1 == 0) {
+
+			var rf1 = "_"
+		} else if (n1 == 1) {
+
+			var rf1 = "X" 
+		} else if (n1 == 2) {
+
+			var rf1 = "O"
+		}
+
+		if (n2 == 0) {
+
+			var rf2 = "_"
+		} else if (n2 == 1) {
+
+			var rf2 = "X" 
+		} else if (n2 == 2) {
+
+			var rf2 = "O"
+		}
+
+		if (n3 == 0) {
+
+			var rf3 = "_"
+		} else if (n3 == 1) {
+
+			var rf3 = "X" 
+		} else if (n3 == 2) {
+
+			var rf3 = "O"
+		}
+
+		if (n4 == 0) {
+
+			var rf4 = "_"
+		} else if (n4 == 1) {
+
+			var rf4 = "X" 
+		} else if (n4 == 2) {
+
+			var rf4 = "O"
+		}
+
+		if (n5 == 0) {
+
+			var rf5 = "_"
+		} else if (n5 == 1) {
+
+			var rf5 = "X" 
+		} else if (n5 == 2) {
+
+			var rf5 = "O"
+		}
+
+		if (n6 == 0) {
+
+			var rf6 = "_"
+		} else if (n6 == 1) {
+
+			var rf6 = "X" 
+		} else if (n6 == 2) {
+
+			var rf6 = "O"
+		}
+
+		if (n7 == 0) {
+
+			var rf7 = "_"
+		} else if (n7 == 1) {
+
+			var rf7 = "X" 
+		} else if (n7 == 2) {
+
+			var rf7 = "O"
+		}
+
+		if (n8 == 0) {
+
+			var rf8 = "_"
+		} else if (n8 == 1) {
+
+			var rf8 = "X" 
+		} else if (n8 == 2) {
+
+			var rf8 = "O"
+		}
+
+		if (n9 == 0) {
+
+			var rf9 = "_"
+		} else if (n9 == 1) {
+
+			var rf9 = "X" 
+		} else if (n9 == 2) {
+
+			var rf9 = "O"
+		}
+
+
+
+
+
+
+
+
+
+
+
+		document.write(`<h1><u>${rf1}|${rf2}|${rf3}<br>${rf4}|${rf5}|${rf6}</u><br>${rf7}|${rf8}|${rf9}</h1>`);
+		
+
+	}
+
+	function tabuleiro2 (n1=0,n2=0,n3=0,n4=0,n5=0,n6=0,n7=0,n8=0,n9=0) {
+
+        if (n1 == 0) {
+
+            var rf1 = "_"
+        } else if (n1 == 1) {
+
+            var rf1 = "X" 
+        } else if (n1 == 2) {
+
+            var rf1 = "O"
+        }
+
+        if (n2 == 0) {
+
+            var rf2 = "_"
+        } else if (n2 == 1) {
+
+            var rf2 = "X" 
+        } else if (n2 == 2) {
+
+            var rf2 = "O"
+        }
+
+        if (n3 == 0) {
+
+            var rf3 = "_"
+        } else if (n3 == 1) {
+
+            var rf3 = "X" 
+        } else if (n3 == 2) {
+
+            var rf3 = "O"
+        }
+
+        if (n4 == 0) {
+
+            var rf4 = "_"
+        } else if (n4 == 1) {
+
+            var rf4 = "X" 
+        } else if (n4 == 2) {
+
+            var rf4 = "O"
+        }
+
+        if (n5 == 0) {
+
+            var rf5 = "_"
+        } else if (n5 == 1) {
+
+            var rf5 = "X" 
+        } else if (n5 == 2) {
+
+            var rf5 = "O"
+        }
+
+        if (n6 == 0) {
+
+            var rf6 = "_"
+        } else if (n6 == 1) {
+
+            var rf6 = "X" 
+        } else if (n6 == 2) {
+
+            var rf6 = "O"
+        }
+
+        if (n7 == 0) {
+
+            var rf7 = "_"
+        } else if (n7 == 1) {
+
+            var rf7 = "X" 
+        } else if (n7 == 2) {
+
+            var rf7 = "O"
+        }
+
+        if (n8 == 0) {
+
+            var rf8 = "_"
+        } else if (n8 == 1) {
+
+            var rf8 = "X" 
+        } else if (n8 == 2) {
+
+            var rf8 = "O"
+        }
+
+        if (n9 == 0) {
+
+            var rf9 = "_"
+        } else if (n9 == 1) {
+
+            var rf9 = "X" 
+        } else if (n9 == 2) {
+
+            var rf9 = "O"
+        }
+
+
+
+
+
+
+
+
+
+        window.alert(`${rf1}|${rf2}|${rf3}\n${rf4}|${rf5}|${rf6}\n${rf7}|${rf8}|${rf9}`);
+        
+
+    }
+
+
+	
+    tabuleiro(vf1,vf2,vf3,vf4,vf5,vf6,vf7,vf8,vf9);
+
+
+
+
+
+
+
+</script>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h3><a href="file:///C:/Users/Erick/Desktop/Projeto/jogo%20da%20velha%20Me
+<br>nu.html">Voltar para o Menu</a></h3>
+<br>
+<h3><a href="file:///C:/Users/Erick/Desktop/Projeto/Jogador%20O.html">Jogar De Novo!</a>
+</center>
+</body>
